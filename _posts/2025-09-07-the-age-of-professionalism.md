@@ -24,7 +24,7 @@ After 6+ years in the industry, working in several companies, my experience may 
 1. Those who churn out code to get features working quickly
 2. Those who approach engineering as a profession
 
-The first group? They were already replaceable — AI just made it obvious.
+The first group? They were already replaceable, AI just made it obvious.
 
 Now the second group? At this point it’s really difficult for me to see how generative AI is going to replace them.
 
