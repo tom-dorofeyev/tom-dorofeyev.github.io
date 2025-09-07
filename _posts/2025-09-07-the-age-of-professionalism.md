@@ -4,8 +4,6 @@ title: "The Age of Professionalism"
 date: 2025-09-07
 ---
 
-# The Age of Professionalism
-
 Over the past year we’ve all witnessed the progress of generative AI. With it came a wave of predictions:  
 _Software engineers are finished, jobs will vanish, product managers will take over, the end is near…_
 
