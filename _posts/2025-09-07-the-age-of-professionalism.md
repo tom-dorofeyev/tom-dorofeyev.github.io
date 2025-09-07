@@ -11,7 +11,7 @@ But I kept asking myself: how exactly is it supposed to happen? Why are people s
 
 ## AI is a tool, not a replacement
 
-After working with AI tools for a few months now, I’ve seen their power firsthand. They are powerful — they help us ship code faster and more reliably than ever (**when used correctly!**).
+After working with AI tools for a few months now, I’ve seen their power firsthand. They are powerful and they help us ship code faster and more reliably than ever (**when used correctly!**).
 
 But here’s the thing: they’re still just tools. They don’t replace the thought process, the judgment, or the professionalism behind software engineering.
 
