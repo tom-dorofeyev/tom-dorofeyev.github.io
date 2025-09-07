@@ -35,7 +35,7 @@ So how do you stay in the second group?
 ### Know the business
 
 - Understand why you’re building something.
-- Learn how your work connects to the revenue. As engineers, our code isn’t the product the value it creates is. Your job is to help the company make money.
+- Learn how your work connects to the revenue. As engineers, our code isn’t the product, the value it creates is. Your job is to help the company make money.
 - Work on your negotiation skills:
   - _“I understand the client wants this but it will conflict with some of our current functionalities.”_
   - _“I can implement it in a week but it will not include features X, Y, Z…”_
