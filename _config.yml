@@ -7,3 +7,6 @@ theme: minima
 
 markdown: kramdown
 highlighter: rouge
+
+minima:
+  skin: auto

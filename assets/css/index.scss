@@ -1,0 +1,34 @@
+---
+---
+
+@import "minima";
+
+// Dark mode override
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+
+  a {
+    color: #80cbc4;
+  }
+
+  a:visited {
+    color: #b39ddb;
+  }
+
+  header, footer, nav {
+    background-color: #1e1e1e;
+  }
+
+  code, pre {
+    background-color: #1e1e1e;
+    color: #ffcc80;
+  }
+
+  blockquote {
+    color: #cfcfcf;
+    border-left: 4px solid #80cbc4;
+  }
+}
