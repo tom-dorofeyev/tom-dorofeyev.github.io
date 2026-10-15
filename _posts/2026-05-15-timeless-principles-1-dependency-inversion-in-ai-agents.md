@@ -3,6 +3,13 @@ layout: post
 title: "Timeless Principles #1: Dependency Inversion in AI Agents"
 # Approximate original publication date: about five months before October 15, 2026.
 date: 2026-05-15
+featured: true
+card_category: Timeless principles
+card_summary: What happens when an AI agent depends on a stable contract instead of a specific notification tool? An old principle finds a new use.
+card_image: /assets/images/dependency-inversion-in-ai-agents.jpg
+card_image_alt: Diagram of an AI agent using a stable notifier interface with swappable delivery channels
+card_image_width: 1379
+card_image_height: 752
 ---
 
 Some software engineering principles remain useful even as the tools change. Dependency inversion is one of them:
