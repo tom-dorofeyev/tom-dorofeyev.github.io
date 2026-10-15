@@ -17,7 +17,7 @@ The same principle applies to AI agents.
 
 Your agent should know that it needs to notify you when your attention is required. But it should not need to know how that notification reaches you.
 
-Whether you receive a message through Telegram, Teams, Slack, or email is an implementation detail—not part of the agent's core logic.
+Whether you receive a message through Telegram, Teams, Slack, or email is an implementation detail, not part of the agent's core logic.
 
 One way to separate those responsibilities is to give the agent a notification skill:
 
@@ -34,7 +34,7 @@ The agent follows the skill's contract. The implementation handles the notificat
 
 ## Swap the implementation, keep the contract
 
-If we decide to switch from Telegram to Teams, Slack, or email, we can change the implementation in `notify.mjs` without changing the agent logic or skill instructions—as long as the interface stays the same.
+If we decide to switch from Telegram to Teams, Slack, or email, we can change the implementation in `notify.mjs` without changing the agent logic or skill instructions, as long as the interface stays the same.
 
 Simply putting code in a separate file is not enough. The important boundary is a stable contract that keeps channel-specific details out of the agent's instructions.
 

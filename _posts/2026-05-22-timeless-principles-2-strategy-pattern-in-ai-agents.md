@@ -27,4 +27,4 @@ A complex feature might need architectural planning before implementation. A sma
 
 The orchestrator decides which workflow fits the request. The selected skill defines how to carry it out.
 
-**Choose the workflow that fits the task—not the same workflow for every task.**
+**Choose the workflow that fits the task, not the same workflow for every task.**

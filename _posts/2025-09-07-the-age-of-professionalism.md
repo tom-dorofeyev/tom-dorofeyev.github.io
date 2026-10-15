@@ -49,7 +49,7 @@ So how do you stay in the second group?
 ### Keep improving
 
 - Use AI tools and get familiar with them as soon as possible because they are here to stay.
-- Invest an average of at least 2–3 hours a week into practice and learning new skills.
+- Invest an average of at least 2 to 3 hours a week into practice and learning new skills.
 - Read books and articles to expose yourself to other professionals and learn from them.
 
 # The Age of Professionalism
