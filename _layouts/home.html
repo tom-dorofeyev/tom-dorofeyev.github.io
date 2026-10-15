@@ -1,0 +1,61 @@
+---
+layout: default
+---
+<div class="home-page">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> SOFTWARE ENGINEERING / FIELD NOTES</p>
+      <h1 id="hero-title">Thinking clearly.<br><span>Building better.</span></h1>
+      <p class="hero-description">I'm Tom Dorofeyev. I write about software engineering, AI agents, and the principles that make our work matter.</p>
+      <a class="hero-link" href="#writing">Explore the writing <span aria-hidden="true">↗</span></a>
+      <div class="hero-meta" aria-label="Topics"><span>01 / ENGINEERING</span><span>02 / AI AGENTS</span><span>03 / CRAFT</span></div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="art-grid"></div>
+      <div class="art-orbit orbit-one"></div>
+      <div class="art-orbit orbit-two"></div>
+      <div class="art-core"><span>&lt;/&gt;</span></div>
+      <span class="art-cross cross-one">+</span><span class="art-cross cross-two">+</span>
+      <span class="art-coordinate coordinate-one">BUILD / LEARN / REPEAT</span>
+      <span class="art-coordinate coordinate-two">SYSTEMS / PEOPLE / PURPOSE</span>
+      <span class="art-corner corner-top"></span><span class="art-corner corner-bottom"></span>
+    </div>
+  </section>
+
+  {% assign home_content = content | strip %}
+  {% if home_content != '' %}
+  <section class="home-content" aria-label="About this blog">{{ content }}</section>
+  {% endif %}
+
+  <section class="writing-section" id="writing" aria-labelledby="writing-title">
+    <div class="section-heading">
+      <div><p class="eyebrow">THE ARCHIVE / {{ site.posts.size }} ENTRIES</p><h2 id="writing-title">Latest writing<span class="title-period">.</span></h2></div>
+      <span class="section-decoration" aria-hidden="true">INDEX_001 — {{ 'now' | date: '%Y' }}</span>
+    </div>
+
+    {% assign featured = site.posts.first %}
+    {% if featured %}
+    <a class="featured-post" href="{{ featured.url | relative_url }}">
+      <div class="featured-label"><span class="pulse-dot" aria-hidden="true"></span> LATEST ARTICLE <span class="featured-number">01 / {{ site.posts.size }}</span></div>
+      <div class="featured-content">
+        <div><time datetime="{{ featured.date | date: '%Y-%m-%d' }}">{{ featured.date | date: '%B %-d, %Y' }}</time><h3>{{ featured.title | escape }}</h3><p>{{ featured.excerpt | strip_html | normalize_whitespace | truncate: 190 | escape }}</p></div>
+        <span class="featured-arrow" aria-hidden="true">↗</span>
+      </div>
+      <span class="featured-foot">READ ARTICLE <span aria-hidden="true">↗</span></span>
+    </a>
+    {% endif %}
+
+    {% if site.posts.size > 1 %}
+    <div class="post-list" aria-label="More articles">
+      {% for post in site.posts offset:1 %}
+      <a class="post-row" href="{{ post.url | relative_url }}">
+        <span class="post-index">{{ forloop.index | plus: 1 | prepend: '0' | slice: -2, 2 }}</span>
+        <span class="post-summary"><span class="post-title">{{ post.title | escape }}</span><span class="post-excerpt">{{ post.excerpt | strip_html | normalize_whitespace | truncate: 150 | escape }}</span></span>
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time>
+        <span class="post-arrow" aria-hidden="true">↗</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </section>
+</div>

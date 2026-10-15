@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1019">
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}">
+    <title>{% if page.title and page.title != 'Home' %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand" href="{{ '/' | relative_url }}" aria-label="Tom Dorofeyev, home">
+            <span class="brand-mark" aria-hidden="true">T<span class="brand-mark-dot">.</span></span>
+            <span class="brand-name">TOM DOROFEYEV<span class="brand-cursor">_</span></span>
+          </a>
+          <nav class="site-nav" aria-label="Primary navigation">
+            <a href="{{ '/' | relative_url }}#writing">Writing</a>
+            <a class="nav-github" href="https://github.com/tom-dorofeyev" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          </nav>
+        </div>
+      </header>
+      <main id="main-content">{{ content }}</main>
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <p><span class="footer-signal" aria-hidden="true"></span> Ideas on code, craft, and the work behind the work.</p>
+          <a href="{{ '/' | relative_url }}">Back to the beginning <span aria-hidden="true">↑</span></a>
+        </div>
+        <div class="footer-bottom"><span>© {{ 'now' | date: '%Y' }} Tom Dorofeyev</span><span>Built with curiosity and Jekyll.</span></div>
+      </footer>
+    </div>
+  </body>
+</html>

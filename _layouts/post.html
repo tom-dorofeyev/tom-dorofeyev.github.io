@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="article-page">
+  <header class="article-header">
+    <a class="back-link" href="{{ '/' | relative_url }}#writing"><span aria-hidden="true">←</span> ALL WRITING</a>
+    <div class="article-heading">
+      <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> FIELD NOTES / {{ page.date | date: '%Y' }}</p>
+      <h1>{{ page.title | escape }}</h1>
+      <div class="article-meta"><span>BY TOM DOROFEYEV</span><span class="meta-divider" aria-hidden="true">/</span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%B %-d, %Y' }}</time></div>
+    </div>
+  </header>
+  <div class="article-content">{{ content }}</div>
+  <nav class="article-navigation" aria-label="Article navigation">
+    {% if page.previous %}<a href="{{ page.previous.url | relative_url }}"><span>← PREVIOUS ARTICLE</span><strong>{{ page.previous.title | escape }}</strong></a>{% endif %}
+    {% if page.next %}<a href="{{ page.next.url | relative_url }}"><span>NEXT ARTICLE →</span><strong>{{ page.next.title | escape }}</strong></a>{% endif %}
+  </nav>
+</article>
