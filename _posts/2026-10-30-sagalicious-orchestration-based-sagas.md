@@ -80,7 +80,7 @@ const checkout = createSaga()
       await payments.charge(data);
     },
     rollback: async ({ data }) => {
-      await payments.refundIfCharged(data.paymentId);
+      await payments.refund(data.paymentId);
     },
   })
   .handler<InventoryCommand>('inventory', {
@@ -88,7 +88,7 @@ const checkout = createSaga()
       await inventory.reserve(data);
     },
     rollback: async ({ data }) => {
-      await inventory.releaseIfReserved(data.reservationId);
+      await inventory.release(data.reservationId);
     },
   })
   .handler<ShippingCommand>('shipping', {
@@ -96,7 +96,7 @@ const checkout = createSaga()
       await shipping.createShipment(data);
     },
     rollback: async ({ data }) => {
-      await shipping.cancelIfCreated(data.shipmentId);
+      await shipping.cancel(data.shipmentId);
     },
   })
   .build();
@@ -104,7 +104,7 @@ const checkout = createSaga()
 
 Each handler receives its own typed payload. Payment sees the amount and customer; inventory sees the items; shipping sees the order and delivery address reference.
 
-The imported services are illustrative application code you supply. They keep a record under each application-generated ID, including any provider reference needed for compensation. For example, `payments.charge` stores the provider's charge reference under `paymentId`, and `refundIfCharged` uses that reference to issue a refund. It does nothing if no charge exists or the payment has already been refunded. The inventory and shipping services follow the same approach for their own operations.
+The imported services are illustrative application code you supply. They keep a record under each application-generated ID, including any provider reference needed for compensation. For example, `payments.charge` stores the provider's charge reference under `paymentId`, and `payments.refund` uses that reference to issue a refund. It does nothing if no charge exists or the payment has already been refunded. The inventory and shipping services follow the same approach for their own operations.
 
 ## Run the workflow
 
