@@ -102,9 +102,7 @@ const checkout = createSaga()
   .build();
 ```
 
-Each handler receives its own typed payload. Payment sees the amount and customer; inventory sees the items; shipping sees the order and delivery address reference.
-
-The imported services are illustrative application code you supply. They keep a record under each application-generated ID, including any provider reference needed for compensation. For example, `payments.charge` stores the provider's charge reference under `paymentId`, and `payments.refund` uses that reference to issue a refund. It does nothing if no charge exists or the payment has already been refunded. The inventory and shipping services follow the same approach for their own operations.
+Each handler gets the data it needs to do its job and undo it if something goes wrong. The payment, inventory, and shipping services are examples you'd replace with your own application code.
 
 ## Run the workflow
 
