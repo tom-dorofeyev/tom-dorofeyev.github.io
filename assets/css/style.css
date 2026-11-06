@@ -29,8 +29,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-
 .site-nav { display: flex; align-items: center; gap: 34px; font-size: 13px; font-weight: 600; }
 .site-nav a { transition: color .2s; }
 .site-nav a:hover { color: var(--accent); }
-.nav-github { font-family: var(--mono); font-size: 12px; letter-spacing: .03em; }
-.nav-github span { color: var(--accent); }
+.nav-social { font-family: var(--mono); font-size: 12px; letter-spacing: .03em; }
+.nav-social span { color: var(--accent); }
 .home-page, .article-page { max-width: 1240px; margin: auto; padding: 0 40px; }
 .hero { min-height: 590px; display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; padding: 77px 0 89px; }
 .eyebrow { margin: 0; color: var(--accent); font: 700 11px/1.5 var(--mono); letter-spacing: .18em; }
@@ -38,6 +38,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-
 .hero h1 { font-size: clamp(49px, 5.2vw, 80px); line-height: 1.04; letter-spacing: -.065em; margin: 28px 0; }
 .hero h1 span { color: var(--accent); }
 .hero-description { max-width: 520px; color: #b6c4ce; font-size: 18px; line-height: 1.8; margin: 0 0 30px; }
+.hero-links { display: flex; flex-wrap: wrap; gap: 20px 28px; }
 .hero-link { display: inline-flex; align-items: center; gap: 28px; border-bottom: 1px solid var(--accent); padding: 0 0 8px; color: var(--accent); font-size: 13px; font-weight: 700; transition: gap .2s; }
 .hero-link:hover { gap: 38px; }
 .hero-meta { display: flex; flex-wrap: wrap; gap: 11px 24px; margin-top: 71px; color: #8a9eae; font: 10px var(--mono); letter-spacing: .07em; }
@@ -139,12 +140,12 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-
   .article-heading { margin-top: 60px; }
 }
 @media (max-width: 560px) {
-  .header-inner { height: 72px; }
+  .header-inner { height: auto; min-height: 72px; flex-wrap: wrap; gap: 16px; padding-top: 18px; padding-bottom: 18px; }
   .brand { gap: 10px; }
   .brand-name { font-size: 10px; }
   .brand-mark { width: 34px; height: 34px; font-size: 18px; }
   .site-nav { gap: 15px; font-size: 12px; }
-  .nav-github { font-size: 11px; }
+  .nav-social { font-size: 11px; }
   .hero { padding: 58px 0 65px; }
   .hero h1 { font-size: clamp(43px,12vw,64px); }
   .hero-description { font-size: 16px; }
